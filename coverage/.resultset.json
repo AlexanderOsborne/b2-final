@@ -1,10 +1,11 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/alexosborne/turing/mod_2/projects/ICs/b2-final/app/models/surgery_doctor.rb": {
+      "/Users/alexosborne/turing/mod_2/projects/ICs/b2-final/app/models/hospitial.rb": {
         "lines": [
           1,
           1,
+          null,
           1,
           null
         ]
@@ -16,53 +17,14 @@
           null
         ]
       },
-      "/Users/alexosborne/turing/mod_2/projects/ICs/b2-final/spec/models/doctor_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          null
-        ]
-      },
       "/Users/alexosborne/turing/mod_2/projects/ICs/b2-final/app/models/doctor.rb": {
         "lines": [
           1,
           1,
           null
         ]
-      },
-      "/Users/alexosborne/turing/mod_2/projects/ICs/b2-final/spec/models/hospitial_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/alexosborne/turing/mod_2/projects/ICs/b2-final/app/models/hospitial.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/alexosborne/turing/mod_2/projects/ICs/b2-final/spec/models/surgery_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/alexosborne/turing/mod_2/projects/ICs/b2-final/app/models/surgery.rb": {
-        "lines": [
-          1,
-          null
-        ]
       }
     },
-    "timestamp": 1610731036
+    "timestamp": 1610731692
   }
 }
