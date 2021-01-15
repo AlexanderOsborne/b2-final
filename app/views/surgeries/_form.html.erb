@@ -1,0 +1,9 @@
+   <%= form_with model: @surgery, method: method, url: url, class: 'surgery_form', local: true do |f| %>  
+    <%= f.label :name, 'title:' %><br>
+    <%= f.text_field :title%><br>
+    <%= f.label :name, 'Day of the Week:' %><br>
+    <%= f.text_field :day_of_week%><br>
+    <%= f.label :name, 'Room Number' %><br>
+    <%= f.text_field :operating_room_number%><br>
+    <%= f.submit %>
+  <% end %>
