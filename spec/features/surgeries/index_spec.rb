@@ -30,10 +30,10 @@ RSpec.describe 'as a visor', type: :feature do
 
     it 'I can click a link of any surgery to go to its show page, I see the title, room number and a section of other surgeries happening this week' do
       visit surgeries_path
+      # save_and_open_page
+      click_on "#{@surgery1.title}"
 
-      click_on "Knee"
-
-      expect(current_path).to eq(surgery_path(@surgery2.id))
+      expect(current_path).to eq(surgery_path(@surgery1.id))
       expect(page).to have_content(@surgery1.day_of_week)
       expect(page).to have_content(@surgery1.operating_room_number)
       expect(page).to have_content(@surgery4.title)
