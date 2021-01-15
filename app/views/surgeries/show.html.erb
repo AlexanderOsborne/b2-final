@@ -1,4 +1,8 @@
 <h1> @surgery.title </h1>
 
-Operating Room: <%= @surgery.operating_room_number%>
-Day of the week: <%= @surgery.day_of_week%>
+Operating Room: <p><%= @surgery.operating_room_number%></p>
+Day of the week: <p><%= @surgery.day_of_week%></p><br>
+
+<% @surgeries.same_day(@surgery).each do |surgery| %>
+All surgeries this day: <%=  surgery%>
+<% end %>

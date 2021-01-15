@@ -6,5 +6,6 @@ class SurgeriesController < ApplicationController
 
   def show
     @surgery = Surgery.find(params[:id])
+    @surgeries = Surgery.all
   end
 end
