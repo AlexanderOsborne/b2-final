@@ -9,7 +9,8 @@ RSpec.describe Surgery, type: :model do
 
   describe 'relationships' do
     # it {should belong_to :}
-    it {should have_many :surgery_doctors}
+    it {should have_many :doctor_surgeries}
+    it { should have_many(:doctors).through(:doctor_surgeries) }
   end
 
   describe 'instance methods' do
