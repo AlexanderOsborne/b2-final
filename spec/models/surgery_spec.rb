@@ -14,5 +14,13 @@ RSpec.describe Surgery, type: :model do
   end
 
   describe 'instance methods' do
+    it 'should return Drs name' do
+      @hospital = Hospitial.create!(name: "Mercy")
+      @doctor1 = Doctor.create!(name: "Dave", specialty: 'General', university: 'Iowa', hospitial_id: @hospital.id)
+      @surgery1 = Surgery.create!(title: "Knee!", day_of_week: 1, operating_room_number:2)
+      @doctor_surgery1 = DoctorSurgery.create!(doctor_id: @doctor1.id, surgery_id: @surgery1.id)
+      
+      expect(@surgery1.dr_name).to eq("Dave")
+    end
   end
 end

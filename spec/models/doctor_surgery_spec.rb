@@ -9,5 +9,6 @@ RSpec.describe DoctorSurgery, type: :model do
   end
 
   describe 'instance methods' do
+  
   end
 end
