@@ -6,7 +6,7 @@ RSpec.describe 'as a visor', type: :feature do
       @hospital = Hospitial.create!(name: "Mercy")
       @doctor1 = Doctor.create!(name: "Dave", specialty: 'General', university: 'Iowa', hospitial_id: @hospital.id)
       @doctor2 = Doctor.create!(name: "Mathews", specialty: 'General', university: 'Iowa', hospitial_id: @hospital.id)
-      @surgery1 = Surgery.create!(title: "Knee!", day_of_week: 1, operating_room_number:2)
+      @surgery1 = Surgery.create!(title: "Knee", day_of_week: 1, operating_room_number:2)
       @surgery2 = Surgery.create!(title: "C section", day_of_week: 2, operating_room_number:1)
       @surgery3 = Surgery.create!(title: "brain", day_of_week: 3, operating_room_number:4)
       @surgery4 = Surgery.create!(title: "heart", day_of_week: 1, operating_room_number:2)
@@ -26,6 +26,18 @@ RSpec.describe 'as a visor', type: :feature do
       expect(page).to have_content(@surgery4.title)
       expect(page).to have_content(@doctor1.name)
       expect(page).to have_content(@doctor2.name)
+    end
+
+    it 'I can click a link of any surgery to go to its show page, I see the title, room number and a section of other surgeries happening this week' do
+      visit surgeries_path
+
+      click_on "Knee"
+
+      expect(current_path).to eq(surgery_path(@surgery2.id))
+      expect(page).to have_content(@surgery1.day_of_week)
+      expect(page).to have_content(@surgery1.operating_room_number)
+      expect(page).to have_content(@surgery4.title)
+      
     end
   end
 end
