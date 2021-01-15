@@ -9,4 +9,8 @@ class Surgery < ApplicationRecord
   def dr_name
     self.doctors[0].name
   end
+
+  def self.same_day(surgery)
+    where(day_of_week: surgery.day_of_week).pluck(:title)
+  end
 end
